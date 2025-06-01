@@ -11,7 +11,7 @@ fi
 echo "[+] Memasang Run ke Termux..."
 
 # Salin file ke /usr/bin/ (alias $PREFIX/bin)
-cp run /data/data/com.termux/files/usr/bin/run
+mv Run/run /data/data/com.termux/files/usr/bin/run
 
 # Ubah permission menjadi hanya bisa dijalankan user
 chmod 700 /data/data/com.termux/files/usr/bin/run
