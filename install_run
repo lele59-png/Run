@@ -1,1 +1,25 @@
-s snsn
+#!/bin/bash
+
+# Jalankan sebagai instalasi 'pkg install run'
+
+# Pastikan file 'run' ada
+if [ ! -f "run" ]; then
+  echo "Error: File 'run' tidak ditemukan!"
+  exit 1
+fi
+
+echo "[+] Memasang Run ke Termux..."
+
+# Salin file ke /usr/bin/ (alias $PREFIX/bin)
+cp run /data/data/com.termux/files/usr/bin/run
+
+# Ubah permission menjadi hanya bisa dijalankan user
+chmod 700 /data/data/com.termux/files/usr/bin/run
+
+# Tambahkan alias ke bashrc jika belum ada
+if ! grep -q "alias run=" ~/.bashrc 2>/dev/null; then
+  echo "alias run='/data/data/com.termux/files/usr/bin/run'" >> ~/.bashrc
+  rm -rf /data/data/com.termux/files/usr/bin/install_run
+fi
+
+echo "[✓] Instalasi selesai. Gunakan perintah: run <folder|file.py>"
