@@ -6,4 +6,4 @@ Skrip sederhana untuk menjalankan file atau folder Python secara otomatis di Ter
 
 ```bash
 git clone https://github.com/lele59-png/Run/
-source Run/.bashrc
+source Run/.bashrc 
