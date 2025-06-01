@@ -3,7 +3,7 @@
 # Jalankan sebagai instalasi 'pkg install run'
 
 # Pastikan file 'run' ada
-if [ ! -f "run" ]; then
+if [ ! -f "Run/run" ]; then
   echo "Error: File 'run' tidak ditemukan!"
   exit 1
 fi
