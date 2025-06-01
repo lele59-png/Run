@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -d "$1" ]; then
+  clear
+  cd "$1" || exit
+  python app.py
+  cd -
+  clear
+elif [ -f "$1" ]; then
+  clear
+  python "$1"
+  clear
+elif [ -f "$1" ]; then
+  clear
+  source "$1"
+  clear
+else
+  echo "No such file or directory: $1"
+fi
