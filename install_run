@@ -22,4 +22,4 @@ if ! grep -q "alias run=" ~/.bashrc 2>/dev/null; then
   rm -rf /data/data/com.termux/files/usr/bin/install_run
 fi
 
-echo "[✓] Instalasi selesai. Gunakan perintah: run <folder|file.py>"
+echo "[✓] Instalasi selesai. Gunakan perintah: run <folder|file.py or file.sh>"
