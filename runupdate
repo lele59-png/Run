@@ -1,0 +1,4 @@
+rm -rf Run 
+git clone https://github.com/lele59-png/Run
+source Run/.bashrc
+echo "ready to use👍"
