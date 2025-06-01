@@ -5,6 +5,5 @@ Skrip sederhana untuk menjalankan file atau folder Python secara otomatis di Ter
 ## 📦 Instalasi
 
 ```bash
-pkg install curl unzip -y
-curl -LO https://raw.githubusercontent.com/lele59-png/run/
-bash runfile-install
+git clone https://github.com/lele59-png/Run/
+source .bashrc
