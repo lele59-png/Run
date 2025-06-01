@@ -6,14 +6,26 @@ if [ -d "$1" ]; then
   python app.py
   cd -
   clear
+  echo "$1 has run" 
+elif [ -d "$1" ]; then
+  clear
+  cd "$1" || exit 
+  ls
+  [ -f "$1"]; then
+  source "$1"
+  cd -
+  clear
+  echo "$1 has run" 
 elif [ -f "$1" ]; then
   clear
   python "$1"
   clear
+ echo "$1 has run" 
 elif [ -f "$1" ]; then
   clear
   source "$1"
   clear
+  echo "$1 has run" 
 else
   echo "No such file or directory: $1"
 fi
