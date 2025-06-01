@@ -1,6 +1,7 @@
 rm -rf Run 
 git clone https://github.com/lele59-png/Run
 source Run/.bashrc
+rm -rf /data/data/com.termux/files/usr/bin/run
 install_run
 echo "run was updated⏫⏫"
 echo "ready to use👍"
