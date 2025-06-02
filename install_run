@@ -21,7 +21,7 @@ if ! grep -q "alias run=" ~/.bashrc 2>/dev/null; then
   echo "alias run='/data/data/com.termux/files/usr/bin/run'" >> ~/.bashrc
 fi 
 
-  rm -f /data/data/com.termux/files/usr/bin/install_run
-  rm -r Run
+rm -f /data/data/com.termux/files/usr/bin/install_run
+rm -r Run
 
 echo "[✓] Instalasi selesai. Gunakan perintah: run <folder|file.py or file.sh>"
