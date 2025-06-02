@@ -3,19 +3,31 @@
 if [ -d "$1" ]; then
   clear
   cd "$1" || exit
-  python app.py
-  cd -
+
+  if [ -f "app.py" ]; then
+    python app.py
+  else
+    shfile=$(ls *.sh 2>/dev/null | head -n 1)
+    if [ -n "$shfile" ]; then
+      ls -l "$shfile"
+      clear
+      source "$shfile"
+      echo "$shfile has run"
+    fi
+  fi
+
+elif [ -f "$1" ]; then
+  ls -l "$1"
   clear
-  echo "$1 has run" 
-elif [ -d "$1" ]; then
-  clear
-  cd "$1" || exit
-  ls
-  [ -f "$1" ]; 
   source "$1"
-  cd -
+  cd - || exit
   clear
-  echo "$1 has run" 
+  echo "$1 has run"
+
+else
+  echo "$1 bukan direktori atau file yang valid."
+fi
+
 elif [ -f "$1" ]; then
   clear
   python "$1"
