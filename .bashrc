@@ -3,4 +3,4 @@ chmod 700 /data/data/com.termux/files/usr/bin/install_run
 mv Run/runupdate /data/data/com.termux/files/usr/bin/runupdate
 chmod 700 /data/data/com.termux/files/usr/bin/runupdate
 echo "👉use runupdate to update"
-echo "👉Install run with install_run"
+echo "👉Install FIRST, run with install_run"
