@@ -11,7 +11,7 @@ elif [ -d "$1" ]; then
   clear
   cd "$1" || exit
   ls
-  [ -f "$1" ]; then
+  [ -f "$1" ]; 
   source "$1"
   cd -
   clear
