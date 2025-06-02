@@ -19,8 +19,9 @@ chmod 700 /data/data/com.termux/files/usr/bin/run
 # Tambahkan alias ke bashrc jika belum ada
 if ! grep -q "alias run=" ~/.bashrc 2>/dev/null; then
   echo "alias run='/data/data/com.termux/files/usr/bin/run'" >> ~/.bashrc
+fi 
+
   rm -f /data/data/com.termux/files/usr/bin/install_run
   rm -r Run
-fi
 
 echo "[✓] Instalasi selesai. Gunakan perintah: run <folder|file.py or file.sh>"
