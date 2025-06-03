@@ -8,8 +8,7 @@ if [ -d "$1" ]; then
     python app.py
   else
     shfile=[ -f "$1"];
-    if [ -n "$shfile" ]; then
-      ls -l "$shfile"
+    if 'shfile'; then
       clear
       source "$shfile"
       echo "$shfile has run"
