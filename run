@@ -7,7 +7,7 @@ if [ -d "$1" ]; then
   if [ -f "app.py" ]; then
     python app.py
   else
-    shfile=$(ls *.sh 2>/dev/null | head -n 1)
+    shfile=[ -f "$1"];
     if [ -n "$shfile" ]; then
       ls -l "$shfile"
       clear
@@ -19,14 +19,12 @@ if [ -d "$1" ]; then
 elif [[ "$1" == *.py && -f "$1" ]]; then
   clear
   python "$1"
-  clear
   echo "$1 has run"
 
-elif [[ "$1" == *.sh && -f "$1" ]]; then
+elif [ -f "$1" ]; then
   ls -l "$1"
   clear
   source "$1"
-  clear
   echo "$1 has run"
 
 else
