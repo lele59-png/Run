@@ -9,7 +9,7 @@ if [ -d "$1" ]; then
   else
     if [ -f "$1" ]; then
       clear
-      source "$1"
+      bash "$1"
       echo "$1 has run"
     fi
   fi
@@ -22,7 +22,7 @@ elif [[ "$1" == *.py && -f "$1" ]]; then
 elif [ -f "$1" ]; then
   ls -l "$1"
   clear
-  source "$1"
+  bash "$1"
   echo "$1 has run"
 
 else
