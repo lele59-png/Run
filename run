@@ -4,11 +4,10 @@ if [ -d "$1" ]; then
   clear
   cd "$1" || exit
 
-  if [ -f "app.py" ]; then
-    python app.py
+  if [ -f "$1" ]; then
+    python "$1"
   else
-    shfile=[ -f "$1"];
-    if 'shfile'; then
+    if [ -f "$1"]; then
       clear
       source "$shfile"
       echo "$shfile has run"
