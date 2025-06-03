@@ -5,6 +5,7 @@ if [ -d "$1" ]; then
   cd "$1" || exit
 
   if [ -f "$1" ]; then
+    clear
     python "$1"
   else
     if [ -f "$1" ]; then
